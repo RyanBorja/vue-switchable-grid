@@ -15,10 +15,24 @@
 		</div>
 
 
+	<ul class="grid" v-if="layout == 'grid'">
+		<li v-for="r in results">
+			<a v-bind:href="r" target="_blank"><img v-bind:src="r" /></a>
+		</li>
+	</ul>
+
+	<ul class="list" v-if="layout == 'list'">
+		<li v-for="r in results">
+			<a v-bind:href="r" target="_blank"><img v-bind:src="r" /></a>
+			<p>{{ r }}</p>
+		</li>
+	</ul>
 
 	</div>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script src="main.js"></script>
+
 </body>
 </html>
